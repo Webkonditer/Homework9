@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args){
-        Autor autor1 = new Autor("Федор", "Достоевский");
-        Autor autor2 = new Autor("Сергей", "Есенин");
+        Autor autor1 = new Autor("Р¤РµРґРѕСЂ", "Р”РѕСЃС‚РѕРµРІСЃРєРёР№");
+        Autor autor2 = new Autor("РЎРµСЂРіРµР№", "Р•СЃРµРЅРёРЅ");
 
-        Book book1 = new Book("Бесы", autor1, "1736");
-        Book book2 = new Book("Шагане ты моя Шагане", autor2, "1736");
+        Book book1 = new Book("Р‘РµСЃС‹", autor1, "1736");
+        Book book2 = new Book("РЁР°РіР°РЅРµ С‚С‹ РјРѕСЏ РЁР°РіР°РЅРµ", autor2, "1736");
 
         book1.setBookDate("2022");
 
