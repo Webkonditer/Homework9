@@ -33,7 +33,7 @@ public class Library {
         }
     }
 
-    public void changeBookDate(String bookTitle, String bookDate){
+    public void changeBookDate(String bookTitle, int bookDate){
         for (Book book: booksArray) {
             if (book.getBookTitle() == bookTitle) {
                 book.setBookDate(bookDate);

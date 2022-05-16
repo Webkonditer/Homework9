@@ -3,10 +3,10 @@ public class Main {
         Autor autor1 = new Autor("Федор", "Достоевский");
         Autor autor2 = new Autor("Сергей", "Есенин");
 
-        Book book1 = new Book("Бесы", autor1, "1736");
-        Book book2 = new Book("Шагане ты моя Шагане", autor2, "1924");
+        Book book1 = new Book("Бесы", autor1, 1736);
+        Book book2 = new Book("Шагане ты моя Шагане", autor2, 1924);
 
-        book1.setBookDate("2022");
+        book1.setBookDate(2022);
 
         //System.out.println(book1.getAutor().getAutorName() + " " + book1.getAutor().getAutorSirname() + " " + book1.getBookTitle() + " " + book1.getBookDate());
 
@@ -18,7 +18,7 @@ public class Main {
         books[1] = book2;
 
         Autor autor3 = new Autor("Анджей", "Сапковский");
-        Book book3 = new Book("Ведьмак", autor3, "1986");
+        Book book3 = new Book("Ведьмак", autor3, 1986);
 
         //Сложный уровень
         Library library = new Library(books, books.length);
@@ -27,7 +27,7 @@ public class Main {
 
         library.searchBook("Ведьмак");
 
-        library.changeBookDate("Ведьмак", "2222");
+        library.changeBookDate("Ведьмак", 2222);
 
         library.printBooks();
     }
