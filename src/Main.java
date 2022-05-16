@@ -20,25 +20,17 @@ public class Main {
         Autor autor3 = new Autor("Анджей", "Сапковский");
         Book book3 = new Book("Ведьмак", autor3, "1986");
 
-        addBook(books, book3);
+        //Сложный уровень
+        Library library = new Library(books, books.length);
 
-        printBooks(books);
+        library.addBook(book3);
+
+        library.searchBook("Ведьмак");
+
+        library.changeBookDate("Ведьмак", "2222");
+
+        library.printBooks();
     }
 
-    public static void addBook(Book[] booksArray, Book newBook){
-        for (int i = 1; i < 5 ; i++) {
-            if (booksArray[i] == null) {
-                booksArray[i] = newBook;
-                break;
-            }
-        }
-    }
 
-    public static void printBooks(Book[] booksArray){
-        for (Book book: booksArray) {
-            if (book != null) {
-                System.out.println(book.getAutor().getAutorName() + " " + book.getAutor().getAutorSirname() + ": " + book.getBookTitle() + ": " + book.getBookDate());
-            }
-        }
-    }
 }
