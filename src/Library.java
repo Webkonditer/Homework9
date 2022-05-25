@@ -1,16 +1,17 @@
+import java.util.Arrays;
+
 public class Library {
 
     private Book[] booksArray;
 
-    public Library(Book[] booksArray, int arrayLenghts) {
+    public Library(int arrayLenghts) {
         this.booksArray = new Book[arrayLenghts];
-        this.booksArray = booksArray;
     }
 
-    public void addBook(Book newBook){
-        for (int i = 1; i < 5 ; i++) {
+    public void addBook(Book book) {
+        for (int i = 0; i < booksArray.length ; i++) {
             if (booksArray[i] == null) {
-                booksArray[i] = newBook;
+                booksArray[i] = book;
                 break;
             }
         }
@@ -40,5 +41,16 @@ public class Library {
                 break;
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        String library = "Library:\n";
+        for (Book book: booksArray) {
+            if (book != null) {
+                library = library + book.toString() + "\n";
+            }
+        }
+        return library;
     }
 }

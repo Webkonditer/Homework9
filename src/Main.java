@@ -1,35 +1,37 @@
 public class Main {
     public static void main(String[] args){
-        Autor autor1 = new Autor("Федор", "Достоевский");
-        Autor autor2 = new Autor("Сергей", "Есенин");
 
-        Book book1 = new Book("Бесы", autor1, 1736);
-        Book book2 = new Book("Шагане ты моя Шагане", autor2, 1924);
+        System.out.println("Authors:");
+        Autor stephenKing = new Autor("Stephen", "King");
+        Autor stephenKing2 = new Autor("Stephen", "King");
+        Autor levTolstoy = new Autor("Lev", "Tolstoy");
+        System.out.println("Author copies equal: " + stephenKing.equals(stephenKing2));
+        System.out.println("Author copies equal by hashCode: " + (stephenKing.hashCode() == stephenKing2.hashCode()));
+        System.out.println("Authors equal: " + stephenKing.equals(levTolstoy));
+        System.out.println("Authors equal by hashCode: " + (stephenKing.hashCode() == levTolstoy.hashCode()));
 
-        book1.setBookDate(2022);
+        System.out.println(stephenKing);
+        System.out.println(levTolstoy);
 
-        //System.out.println(book1.getAutor().getAutorName() + " " + book1.getAutor().getAutorSirname() + " " + book1.getBookTitle() + " " + book1.getBookDate());
+        System.out.println("==============================");
 
-        //Средний уровень
+        System.out.println("Books:");
+        Book theStand = new Book("The Stand", stephenKing, 1976);
+        Book theStand2 = new Book("The Stand", stephenKing, 1976);
+        Book warAndPeace = new Book("War and Peace", levTolstoy, 1869);
+        System.out.println("Book copies equal: " + theStand.equals(theStand2));
+        System.out.println("Book copies equal by hashCode: " + (theStand.hashCode() == theStand2.hashCode()));
+        System.out.println("Books equal: " + theStand.equals(warAndPeace));
+        System.out.println("Books equal by hashCode: " + (theStand.hashCode() == warAndPeace.hashCode()));
+        System.out.println(theStand);
+        System.out.println(warAndPeace);
 
-        Book[] books = new Book[5];
+        System.out.println("==============================");
 
-        books[0] = book1;
-        books[1] = book2;
-
-        Autor autor3 = new Autor("Анджей", "Сапковский");
-        Book book3 = new Book("Ведьмак", autor3, 1986);
-
-        //Сложный уровень
-        Library library = new Library(books, books.length);
-
-        library.addBook(book3);
-
-        library.searchBook("Ведьмак");
-
-        library.changeBookDate("Ведьмак", 2222);
-
-        library.printBooks();
+        Library library = new Library(2);
+        library.addBook(theStand);
+        library.addBook(warAndPeace);
+        System.out.println(library);
     }
 
 
