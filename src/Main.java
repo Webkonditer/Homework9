@@ -1,3 +1,5 @@
+import exception.NonLegalUserException;
+
 public class Main {
     public static void main(String[] args){
 
@@ -32,6 +34,9 @@ public class Main {
         library.addBook(theStand);
         library.addBook(warAndPeace);
         System.out.println(library);
+
+        throw new NonLegalUserException("Не годный юзер");
+
     }
 
 
